@@ -1,4 +1,5 @@
 Olga Smith
+
 An article page with an editable title.
 
 Since back-end was optional for me, I did front-end part of the exercise.
