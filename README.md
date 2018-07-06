@@ -10,5 +10,7 @@ to do functionality of adding random characters to existing titles.
 
 I used SCSS.
 In order to make SCSS changes, install dependencies and run a gulp command:
+
 npm install
+
 gulp
