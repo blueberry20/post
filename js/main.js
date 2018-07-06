@@ -4,7 +4,7 @@ let xButton = document.getElementById("xIconButton");
 let h1 = document.querySelector("h1");
 let editBox = document.getElementById("editBox");
 let slugsArray = [];
-let currentSlug = "please enter a post title";
+let currentSlug = "";
 
 //open edit mode
 document
@@ -46,15 +46,28 @@ function discardTitle() {
 
 //after text is submitted, hide edit icons, show h1
 function submitTitle() {
-  if (titleTextbox.value == "") {
-    console.log("empty");
+  if (titleTextbox.value.length < 1) {
     return;
   } else {
     editBox.style.display = "none";
     document.querySelector("h1 .textClipSpan").innerHTML = titleTextbox.value;
     h1.style.display = "block";
-    titlesArray.push(titleTextbox.value);
+    currentSlug = string_to_slug(titleTextbox.value);
+    addSlug();
   }
+}
+
+//add slug to slugsArray
+function addSlug() {
+  //if slug is not found in slugsArray, add it
+  if (slugsArray.indexOf(currentSlug) == -1) {
+    slugsArray.push(currentSlug);
+  } else {
+    currentSlug = currentSlug + "-" + randomString();
+    slugsArray.push(currentSlug);
+  }
+  updateSlug();
+  console.log(slugsArray);
 }
 
 //check if textbox has any text, change checkmark to green and
@@ -67,19 +80,19 @@ function checkTitle() {
 }
 
 function generateSlug() {
-  console.log(titlesArray);
   if (titleTextbox.value < 1) {
     currentSlug = "please enter a post title";
   } else {
     currentSlug = string_to_slug(titleTextbox.value);
-    //check if slug doesnt exists in the slugsArray
-    if (slugsArray.indexOf(currentSlug) === -1) {
-      currentSlug = currentSlug;
-    } else {
+    //check if slug exists in the slugsArray, then add 5 random digits
+    if (slugsArray.indexOf(currentSlug) !== -1) {
       currentSlug = currentSlug + "-" + randomString();
     }
   }
+  updateSlug();
+}
 
+function updateSlug() {
   document.getElementById("slugName").innerHTML = currentSlug;
 }
 

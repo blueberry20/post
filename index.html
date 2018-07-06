@@ -4,24 +4,17 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
-  <meta name="description" content="">
+  <title>Post</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="fonts/copernicus_webfont/font.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-
 
   <div class="container">
       <!--====================Picture row===================-->
@@ -31,14 +24,14 @@
                   <div class="fixedWidthCol">
                   </div>
                   <div class="fluidContainer">
-                      <div class="col-1-8"></div>
-                      <div class="col-5-8 relative flexColumn">
+                      <div class="col-1-8 sm-hide"></div>
+                      <div class="col-5-8 sm-100 relative flexColumn">
                           <!--======Heading with pencil icon==========-->
                           <h1>
-                              <div id="pencilIconButton" class="iconButton">
-                                <img src="./assets/pencil.svg" alt="an icon of pencil, edit text tool"/>
-                              </div>
                               <span class="backgroundSpan">
+                                  <div id="pencilIconButton" class="iconButton">
+                                    <img src="./assets/pencil.svg" alt="an icon of pencil, edit text tool"/>
+                                  </div>
                                   <span class="textClipSpan">Are we out of the woods yet?</span>
                               </span>
                           </h1>
@@ -55,7 +48,7 @@
                           </div>
 
                       </div>
-                      <div class="col-2-8 text-right">
+                      <div class="col-2-8 sm-hide text-right">
                           <img id="logoImg" src="./assets/logo_and_hamburger.svg" alt="logo and hamburger menu"/>
                       </div>
                   </div>
@@ -70,8 +63,8 @@
           <div class="fixedWidthCol">
           </div>
           <div class="fluidContainer flex">
-              <div class="col-1-8"></div>
-              <div class="col-2-8">
+              <div class="col-1-8 sm-100"></div>
+              <div class="col-2-8 sm-100 sm-text-center">
                   <div class="divider"></div>
                   <span class="h3">By</span>
                   <h2>Bob Loblow</h2>
@@ -84,7 +77,7 @@
                       <h3>#fungus</h3>
                 </div>
               </div>
-              <div class="col-5-8">
+              <div class="col-5-8 sm-100">
                   <p><span class="h4">NEW YORK, NY.</span> Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere.</p>
 
                   <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim.</p>
@@ -105,9 +98,6 @@
       </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
 </body>
